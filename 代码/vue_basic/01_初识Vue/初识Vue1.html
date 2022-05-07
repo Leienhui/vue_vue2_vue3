@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>初识Vue</title>
+	<!-- 引入Vue -->
+	<script type="text/javascript" src="../js/vue.js"></script>
+</head>
+
+<body>
+	<div class="demo">
+		<h1>Hello，{{name.toUpperCase()}}，{{address}}</h1>
+	</div>
+	<div class="demo">
+		<h1>Hello，{{name.toUpperCase()}}，{{address}}</h1>
+	</div>
+
+	<script type="text/javascript">
+		Vue.config.productionTip = false //阻止 vue 在启动时生成生产提示。
+
+		//创建Vue实例
+		new Vue({
+			el: '.demo', //一个vue实例不能同时接管多个容器，否则只有第一个容器有效
+			data: {
+				name: 'atguigu',
+				address: '北京'
+			}
+		})
+	</script>
+</body>
+
+</html>

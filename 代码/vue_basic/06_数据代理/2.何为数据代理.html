@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>何为数据代理</title>
+</head>
+
+<body>
+	<!-- 数据代理：通过一个对象代理对另一个对象中属性的操作（读/写）-->
+	<script type="text/javascript">
+		let obj = {
+			x: 100
+		}
+		let obj2 = {
+			y: 200
+		}
+		/*
+		Object.defineProperty(obj,prop,descriptor)
+		obj： 必需。 劫持目标对象
+		prop： 必需。 需定义或修改的属性的名字
+		descriptor： 必需。 目标属性所拥有的特性
+		*/
+
+		Object.defineProperty(obj2, 'x', {
+			get() {
+				console.log("get")
+				return obj.x
+			},
+			set(value) {
+				console.log("set")
+				obj.x = value
+			}
+		})
+	</script>
+</body>
+
+</html>
