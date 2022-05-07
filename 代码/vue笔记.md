@@ -32,11 +32,15 @@
 
 
 
-[初识Vue](.\vue_basic\01_初识Vue\初识Vue.html)
+[初识Vue](vue_basic/01_初识Vue/初识Vue.html)
+
+
 
 **一个vue实例不能同时接管多个容器，否则只有第一个容器有效**
 
-[一个vue实例同时接管多个容器](.\vue_basic\01_初识Vue\初识Vue1.html)
+
+
+[一个vue实例同时接管多个容器](vue_basic/01_初识Vue/初识Vue1.html)
 
 
 
