@@ -4,7 +4,7 @@
 
 
 
-## vue基础
+## vue基础知识
 
 ### 1.Vue是什么？
 
@@ -156,7 +156,7 @@
 
 [一个重要的内置关系](vue_basic/18_非单文件组件/5.一个重要的内置关系.html)
 
-### [Vue知识点](vue_test/README.md)
+### [Vue脚手架路由等知识](vue_test/README.md)
 
 
 ## vscode 知识点
