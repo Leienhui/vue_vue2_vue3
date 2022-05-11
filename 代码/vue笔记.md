@@ -156,7 +156,10 @@
 
 [一个重要的内置关系](vue_basic/18_非单文件组件/5.一个重要的内置关系.html)
 
-### [Vue脚手架路由等知识](vue_test/README.md)
+## [Vue脚手架路由等知识](vue_test/README.md)
+
+资料（含课件）\01_课件\vue3快速上手.md
+## [vue3快速上手](../资料（含课件）/01_课件\vue3快速上手.md)
 
 
 ## vscode 知识点
