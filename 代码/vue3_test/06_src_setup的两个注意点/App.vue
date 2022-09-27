@@ -1,5 +1,9 @@
 <template>
 	<Demo @hello="showHelloMsg" msg="你好啊" school="尚硅谷">
+	<!--命名插槽
+	写法1：slot="xxx"
+	写法2： v-slot:xxx->vue3支持这种写法
+	-->
 		<template v-slot:qwe>
 			<span>尚硅谷</span>
 		</template>

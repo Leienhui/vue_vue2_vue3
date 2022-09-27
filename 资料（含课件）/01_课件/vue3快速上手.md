@@ -105,17 +105,24 @@ npm run dev
 ## 1.拉开序幕的setup
 
 1. 理解：Vue3.0中一个新的配置项，值为一个函数。
+
 2. setup是所有<strong style="color:#DD5145">Composition API（组合API）</strong><i style="color:gray;font-weight:bold">“ 表演的舞台 ”</i>。
-4. 组件中所用到的：数据、方法等等，均要配置在setup中。
+
+3. 组件中所用到的：数据、方法等等，均要配置在setup中。
+
 5. setup函数的两种返回值：
    1. 若返回一个对象，则对象中的属性、方法, 在模板中均可以直接使用。（重点关注！）
    2. <span style="color:#aad">若返回一个渲染函数：则可以自定义渲染内容。（了解）</span>
+   
 6. 注意点：
    1. 尽量不要与Vue2.x配置混用
       - Vue2.x配置（data、methos、computed...）中<strong style="color:#DD5145">可以访问到</strong>setup中的属性、方法。
       - 但在setup中<strong style="color:#DD5145">不能访问到</strong>Vue2.x配置（data、methos、computed...）。
       - 如果有重名, setup优先。
+      
    2. setup不能是一个async函数，因为返回值不再是return的对象, 而是promise, 模板看不到return对象中的属性。（后期也可以返回一个Promise实例，但需要Suspense和异步组件的配合）
+   
+      
 
 ##  2.ref函数
 
@@ -242,6 +249,10 @@ npm run dev
   }
   ```
 
+> computed函数的回调什么时候执行？
+>
+> 初始化的时候执行一次和所依赖的数据发生变化的时候执行
+
 ### 2.watch函数
 
 - 与Vue2.x中watch配置功能一致
@@ -249,7 +260,7 @@ npm run dev
 - 两个小“坑”：
 
   - 监视reactive定义的响应式数据时：oldValue无法正确获取、强制开启了深度监视（deep配置失效）。
-  - 监视reactive定义的响应式数据中某个属性时：deep配置有效。
+  - 监视reactive定义的响应式数据中**某个属性**时：deep配置有效。
   
   ```js
   //情况一：监视ref定义的响应式数据
@@ -283,7 +294,7 @@ npm run dev
   //特殊情况
   watch(()=>person.job,(newValue,oldValue)=>{
       console.log('person的job变化了',newValue,oldValue)
-  },{deep:true}) //此处由于监视的是reactive素定义的对象中的某个属性，所以deep配置有效
+  },{deep:true}) //此处由于监视的是reactive所定义的对象中的某个属性，所以deep配置有效
   ```
 
 ### 3.watchEffect函数
